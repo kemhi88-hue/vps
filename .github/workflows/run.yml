@@ -1,0 +1,10 @@
+name: SSH May Ao
+on: workflow_dispatch
+
+jobs:
+  shell:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Thiet lap Tmate (SSH vao may ao)
+        uses: mxschmitt/action-tmate@v3
