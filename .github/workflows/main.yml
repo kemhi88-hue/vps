@@ -1,11 +1,17 @@
-name: Run VM
-on: push
+name: May Ao Github
+on: workflow_dispatch # Chạy thủ công bằng nút bấm
+
 jobs:
-  build:
+  run-vm:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello World
+      - name: Cap nhat he thong
+        run: sudo apt-get update
+      
+      - name: Cai dat công cu can thiet
+        run: sudo apt-get install -y screen htop curl
+        
+      - name: Giu may ao chay (vi du 1 tieng)
         run: |
-          echo "Day la may ao cua ban"
-          lscpu # Xem cau hinh CPU
-          free -m # Xem RAM
+          echo "May ao dang chay... Ban co the thuc hien lenh tai day."
+          sleep 3600 # May se duy tri trong 3600 giay (1 tieng)
