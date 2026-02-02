@@ -1,0 +1,11 @@
+name: Run VM
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello World
+        run: |
+          echo "Day la may ao cua ban"
+          lscpu # Xem cau hinh CPU
+          free -m # Xem RAM
